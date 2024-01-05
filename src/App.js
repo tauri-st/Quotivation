@@ -22,6 +22,8 @@ function App() {
     setLoading(false);
   };
 
+  useEffect(() => {}, []);
+
   return (
     <div className='App'>
       <Header />

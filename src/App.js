@@ -30,7 +30,11 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <main></main>
+      {/* conditionally render the Loader component if the loading 
+      state is set to true – otherwise, log out the quotes 
+      array like so: JSON.stringify(quotes) so that we can 
+      have a look at what we fetched */}
+      <main>{loading ? < Loader /> : JSON.stringify(quotes)}</main>
       <Footer />
     </div>
   );

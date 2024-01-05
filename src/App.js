@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Quotes from "./components/Quotes";
 import { Loader } from "react-feather";
 import "./App.css";
 
@@ -33,8 +34,9 @@ function App() {
       {/* conditionally render the Loader component if the loading 
       state is set to true – otherwise, log out the quotes 
       array like so: JSON.stringify(quotes) so that we can 
-      have a look at what we fetched */}
-      <main>{loading ? < Loader /> : JSON.stringify(quotes)}</main>
+      have a look at what we fetched. Later replace with
+      the Quotes component. */}
+      <main>{loading ? < Loader /> : <Quotes quotes={quotes} />}</main>
       <Footer />
     </div>
   );

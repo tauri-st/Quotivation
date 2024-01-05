@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Loader } from "react-feather";
 import "./App.css";
 
 function App() {
-  const [quotes,setQuotes] = useState([]);
+  const [quotes, setQuotes] = useState([]);
   const [loading, setLoading] = useState(false);
   
   const quotesUrl =
@@ -22,7 +23,9 @@ function App() {
     setLoading(false);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetchQuotes();
+  }, []);
 
   return (
     <div className='App'>

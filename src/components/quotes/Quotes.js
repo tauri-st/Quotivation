@@ -7,7 +7,7 @@ function Quotes({quotes}) {
         <section className="all-quotes">
             <div className="quotes wrapper">
                 {quotes.map((quote) => {
-                    return < QuoteCard key={quote.id} quote={quote}/>
+                    < QuoteCard key={quote.id} quote={quote}/>
                 })};
             </div>
         </section>

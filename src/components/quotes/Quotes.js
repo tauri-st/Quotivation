@@ -5,7 +5,7 @@ function Quotes({quotes}) {
     return (
         <section className="all-quotes">
             <div className="quotes wrapper">
-                JSON.stringify(quotes)
+                {JSON.stringify(quotes)}
             </div>
         </section>
     );

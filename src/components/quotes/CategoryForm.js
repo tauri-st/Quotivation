@@ -1,3 +1,6 @@
+import React from "react";
+import { Filter } from "react-feather";
+
 function CategoryForm () {
     return (
         <div className='category-form'>

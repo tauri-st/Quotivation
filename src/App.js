@@ -32,6 +32,10 @@ function App() {
     fetchQuotes();
   }, []);
 
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
+  };
+
   return (
     <div className='App'>
       <Header />

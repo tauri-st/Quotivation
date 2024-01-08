@@ -11,7 +11,7 @@ function CategoryForm ( {category, categories} ) {
                 {/*Set value to category state passed from App*/}
                 <select id='category' name='category' value="category">
                 {categories.map((item) => (
-                    <option value={key}>{item}</option>
+                    <option value={item.key}>{item}</option>
                 ))}
                 </select>
             </form>

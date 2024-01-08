@@ -13,8 +13,8 @@ function App() {
   const quotesUrl =
     "https://gist.githubusercontent.com/skillcrush-curriculum/6365d193df80174943f6664c7c6dbadf/raw/1f1e06df2f4fc3c2ef4c30a3a4010149f270c0e0/quotes.js";
 
-  const categories = [("All", "Leadership", "Empathy", 
-    "Motivation", "Learning", "Success", "Empowerment")];
+  const categories = ["All", "Leadership", "Empathy", 
+    "Motivation", "Learning", "Success", "Empowerment"];
   
   const fetchQuotes = async () => {
     try {
@@ -44,7 +44,11 @@ function App() {
       array like so: JSON.stringify(quotes) so that we can 
       have a look at what we fetched. Later replace with
       the Quotes component. */}
-      <main>{loading ? < Loader /> : <Quotes quotes={quotes} categories={categories} category={category}/>}</main>
+      {/*Pass the handleCategoryChange to Quotes as a prop, 
+      and then from Quotes to CategoryForm. In CategoryForm, 
+      destructure it and use it in a onChange event for your 
+      select statement.*/}
+      <main>{loading ? < Loader /> : <Quotes quotes={quotes} categories={categories} category={category} handleCategoryChange={handleCategoryChange}/>}</main>
       <Footer />
     </div>
   );

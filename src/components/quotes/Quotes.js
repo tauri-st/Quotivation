@@ -4,7 +4,7 @@ import CategoryForm from "./CategoryForm";
 
 // Destructure the category and categories prop that we 
 // receive from App.js
-function Quotes( {quotes, category, categories} ) {
+function Quotes( {quotes, category, categories, handleCategoryChange} ) {
 
     return (
         <section className="all-quotes">
@@ -12,7 +12,7 @@ function Quotes( {quotes, category, categories} ) {
                 <div className="category-header">
                     <p>Browse through your collection of quotes</p>
                     {/*Pass category state and categories array passed from App*/}
-                    <CategoryForm category={category} categories={categories}/>
+                    <CategoryForm category={category} categories={categories} handleCategoryChange={handleCategoryChange}/>
                 </div>
                 {quotes.map((quote) => (
                     < QuoteCard key={quote.id} quote={quote} />

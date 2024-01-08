@@ -4,7 +4,7 @@ import CategoryForm from "./CategoryForm";
 
 // Destructure the category and categories prop that we 
 // receive from App.js
-function Quotes({quotes}) {
+function Quotes( {quotes, category, categories} ) {
 
     return (
         <section className="all-quotes">

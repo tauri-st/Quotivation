@@ -7,7 +7,7 @@ function Quotes({quotes}) {
         <section className="all-quotes">
             <div className="quotes wrapper">
                 {quotes.map((quote) => (
-                    < QuoteCard key={quote.id} quote={quote}/>
+                    < QuoteCard key={quote.id} quote={quote} categories={categories} category={category} />
                 ))}
             </div>
         </section>

@@ -8,7 +8,11 @@ function CategoryForm ( {category, categories} ) {
             <form className='category-filter'>
                 <Filter />
                 <label htmlFor='category'>Filter Quotes:</label>
-                <select id='category' name='category'>
+                {/*Set value to category state passed from App*/}
+                <select id='category' name='category' value="category">
+                {categories.map((item) => (
+                    <option value={key}>{item}</option>
+                ))}
                 </select>
             </form>
         </div>

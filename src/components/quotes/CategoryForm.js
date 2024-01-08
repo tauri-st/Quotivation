@@ -10,8 +10,8 @@ function CategoryForm ( {category, categories, handleCategoryChange} ) {
                 <label htmlFor='category'>Filter Quotes:</label>
                 {/*Set value to category state passed from App*/}
                 <select id='category' name='category' value={category} onChange={handleCategoryChange}>
-                {categories.map((item) => (
-                    <option value={item.key}>{item}</option>
+                {categories.map((category) => (
+                    <option key={category} value={category}>{category}</option>
                 ))}
                 </select>
             </form>

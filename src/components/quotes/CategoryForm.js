@@ -1,7 +1,8 @@
 import React from "react";
 import { Filter } from "react-feather";
 
-function CategoryForm () {
+//Destructure category state and categories arrays
+function CategoryForm ( {category, categories} ) {
     return (
         <div className='category-form'>
             <form className='category-filter'>

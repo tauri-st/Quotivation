@@ -40,7 +40,7 @@ function App() {
       array like so: JSON.stringify(quotes) so that we can 
       have a look at what we fetched. Later replace with
       the Quotes component. */}
-      <main>{loading ? < Loader /> : <Quotes quotes={quotes} />}</main>
+      <main>{loading ? < Loader /> : <Quotes quotes={quotes} categories={categories} category={category}/>}</main>
       <Footer />
     </div>
   );

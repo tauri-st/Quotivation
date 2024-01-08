@@ -1,5 +1,6 @@
 import React from "react";
 import QuoteCard from "./QuoteCard";
+import CategoryForm from "./CategoryForm";
 
 function Quotes({quotes}) {
 

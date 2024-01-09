@@ -9,7 +9,7 @@ function App() {
   const [quotes, setQuotes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [category, setCategory] = useState("All");
-  const [favoriteQuotes, setFavoriteQuotes] = [];
+  const [favoriteQuotes, setFavoriteQuotes] = useState([]);
   
   const quotesUrl =
     "https://gist.githubusercontent.com/skillcrush-curriculum/6365d193df80174943f6664c7c6dbadf/raw/1f1e06df2f4fc3c2ef4c30a3a4010149f270c0e0/quotes.js";
@@ -44,7 +44,7 @@ function App() {
   // clicking on the quote card’s heart icon and use quoteId
   // to find that specific quote from the quotes array
   const addToFavorites = (quoteId) => {
-    console.log("In favoriteQuotes with id ${quoteId}")
+    console.log("In favorite quotes with id ${quoteId}")
   };
 
   return (

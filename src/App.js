@@ -40,6 +40,13 @@ function App() {
     setCategory(e.target.value);
   };
 
+  // will allow you to add a quote to your favorites by 
+  // clicking on the quote card’s heart icon and use quoteId
+  // to find that specific quote from the quotes array
+  const addToFavorites = (quoteId) => {
+    console.log("In favorite quotes with id ${quoteId}")
+  };
+
   return (
     <div className='App'>
       <Header />

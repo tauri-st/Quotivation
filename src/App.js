@@ -15,6 +15,9 @@ function App() {
 
   const categories = ["All", "Leadership", "Empathy", 
     "Motivation", "Learning", "Success", "Empowerment"];
+  const filteredQuotes = quotes.filter(function () {
+    return !quotes.includes(category);
+  });
   
   const fetchQuotes = async () => {
     try {
@@ -48,7 +51,7 @@ function App() {
       and then from Quotes to CategoryForm. In CategoryForm, 
       destructure it and use it in a onChange event for your 
       select statement.*/}
-      <main>{loading ? < Loader /> : <Quotes quotes={quotes} categories={categories} category={category} handleCategoryChange={handleCategoryChange}/>}</main>
+      <main>{loading ? < Loader /> : <Quotes quotes={filterQuotes} categories={categories} category={category} handleCategoryChange={handleCategoryChange}/>}</main>
       <Footer />
     </div>
   );

@@ -13,6 +13,7 @@ function QuoteCard( {quote} ) {
             </div>
             <footer>
                 <p className="author">{quote.author}</p>
+                <p className="add-favorite"></p>
             </footer>
         </article>
     )

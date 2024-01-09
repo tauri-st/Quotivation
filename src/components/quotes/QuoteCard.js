@@ -1,4 +1,5 @@
 import React from "react";
+import { Heart } from "react-feather";
 
 function QuoteCard( {quote} ) {
     return (
@@ -13,7 +14,7 @@ function QuoteCard( {quote} ) {
             </div>
             <footer>
                 <p className="author">{quote.author}</p>
-                <p className="add-favorite"></p>
+                <p className="add-favorite"><Heart/></p>
             </footer>
         </article>
     )

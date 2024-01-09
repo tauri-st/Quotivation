@@ -15,9 +15,8 @@ function App() {
 
   const categories = ["All", "Leadership", "Empathy", 
     "Motivation", "Learning", "Success", "Empowerment"];
-  const filteredQuotes = quotes.filter(quote =>
-    quote.categories.includes(category)
-  );
+  const filteredQuotes = category !== "All" ? quotes.filter(quote =>
+    quote.categories.includes(category)) : quotes;
   
   const fetchQuotes = async () => {
     try {

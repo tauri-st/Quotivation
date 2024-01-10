@@ -46,6 +46,15 @@ function App() {
   const addToFavorites = (quoteId) => {
     const selectedQuote = quotes.find((quote) => quote.id === quoteId);
     console.log(selectedQuote);
+
+    if (favoriteQuotes.length < maxFaves) {
+      //Include all quotes already in array and add new quote
+      setFavoriteQuotes([...favoriteQuotes, selectedQuote]);
+      console.log("New quote added to array")
+      console.log(favoriteQuotes.length);
+    } else {
+      console.log("Max number of Favorite Quotes reached. Please delete one to add another!")
+    }
   };
 
   return (

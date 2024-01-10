@@ -81,6 +81,12 @@ function App() {
           handleCategoryChange={handleCategoryChange}
           addToFavorites={addToFavorites}/>}
         </main>
+        <section className="favorite-quotes">
+          <div className="wrapper quotes">
+            <h3>Top 3 favorite quotes</h3>
+              {JSON.stringify(favoriteQuotes)}
+          </div>
+        </section>
       <Footer />
     </div>
   );

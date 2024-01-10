@@ -62,6 +62,14 @@ function App() {
     }
   };
 
+  // update the favoriteQuotes state to no longer contain the 
+  // quote whose id was passed to the removeFromFavorites 
+  // function.
+  const removeFromFavorites = (quoteId) => {
+    setFavoriteQuotes(favoriteQuotes.filter(quote =>
+      !quotes.includes(quoteId)))
+  };
+
   return (
     <div className='App'>
       <Header />

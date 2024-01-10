@@ -1,6 +1,6 @@
 import React from "react";
 
-function FavoriteQuotes () {
+function FavoriteQuotes ( {favoriteQuotes, maxFaves} ) {
 
     return (
         <section className="favorite-quotes">

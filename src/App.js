@@ -44,7 +44,8 @@ function App() {
   // clicking on the quote card’s heart icon and use quoteId
   // to find that specific quote from the quotes array
   const addToFavorites = (quoteId) => {
-    console.log("In favorite quotes with id ${quoteId}")
+    const selectedQuote = quotes.find((quote) => quote.id === quoteId);
+    console.log(selectedQuote);
   };
 
   return (

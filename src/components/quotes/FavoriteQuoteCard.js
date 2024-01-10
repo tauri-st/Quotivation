@@ -1,12 +1,12 @@
 import React from "react";
 
-function FavoriteQuoteCard () {
+function FavoriteQuoteCard ( {quote} ) {
 
     return (
         <li className="quote-card">
             <span className="close-quote">x</span>
-            <h3></h3>
-            <p></p>
+            <h3>{quote.text}</h3>
+            <p>{quote.author}</p>
         </li>
     )
 };

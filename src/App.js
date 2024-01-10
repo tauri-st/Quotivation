@@ -45,7 +45,9 @@ function App() {
   // to find that specific quote from the quotes array
   const addToFavorites = (quoteId) => {
     const selectedQuote = quotes.find((quote) => quote.id === quoteId);
+    const alreadyFavorite = favoriteQuotes.find((favorite) => selectedQuote.id === favorite.id)
     console.log(selectedQuote);
+    console.log(alreadyFavorite);
 
     if (favoriteQuotes.length < maxFaves) {
       //Include all quotes already in array and add new quote

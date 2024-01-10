@@ -49,7 +49,9 @@ function App() {
     console.log(selectedQuote);
     console.log(alreadyFavorite);
 
-    if (favoriteQuotes.length < maxFaves) {
+    if (alreadyFavorite === selectedQuote) {
+      console.log("This quote is already in your favorites! Choose another!")
+    } else if (favoriteQuotes.length < maxFaves) {
       //Include all quotes already in array and add new quote
       setFavoriteQuotes([...favoriteQuotes, selectedQuote]);
       console.log("New quote added to array")

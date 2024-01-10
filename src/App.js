@@ -90,7 +90,7 @@ function App() {
           handleCategoryChange={handleCategoryChange}
           addToFavorites={addToFavorites}/>}
       </main>
-      <FavoriteQuotes favoriteQuotes={favoriteQuotes} maxFaves={maxFaves}/>
+      <FavoriteQuotes favoriteQuotes={favoriteQuotes} maxFaves={maxFaves} removeFromFavorites={removeFromFavorites}/>
       <Footer />
     </div>
   );

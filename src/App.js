@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Quotes from "./components/quotes/Quotes";
+import FavoriteQuotes from "./components/quotes/FavoriteQuotes";
 import { Loader } from "react-feather";
 import "./App.css";
 
@@ -80,7 +81,8 @@ function App() {
           category={category} 
           handleCategoryChange={handleCategoryChange}
           addToFavorites={addToFavorites}/>}
-        </main>
+      </main>
+      <FavoriteQuotes favoriteQuotes={favoriteQuotes} maxFaves={maxFaves}/>
       <Footer />
     </div>
   );

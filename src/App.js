@@ -82,15 +82,16 @@ function App() {
       and then from Quotes to CategoryForm. In CategoryForm, 
       destructure it and use it in a onChange event for your 
       select statement.*/}
-      <main>{loading ? < Loader /> : 
-        <Quotes 
-          filteredQuotes={filteredQuotes} 
-          categories={categories} 
-          category={category} 
-          handleCategoryChange={handleCategoryChange}
-          addToFavorites={addToFavorites}/>}
+      <main>
+        <FavoriteQuotes favoriteQuotes={favoriteQuotes} maxFaves={maxFaves} removeFromFavorites={removeFromFavorites}/>
+        {loading ? < Loader /> : 
+          <Quotes 
+            filteredQuotes={filteredQuotes} 
+            categories={categories} 
+            category={category} 
+            handleCategoryChange={handleCategoryChange}
+            addToFavorites={addToFavorites}/>}
       </main>
-      <FavoriteQuotes favoriteQuotes={favoriteQuotes} maxFaves={maxFaves} removeFromFavorites={removeFromFavorites}/>
       <Footer />
     </div>
   );

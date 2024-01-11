@@ -81,6 +81,7 @@ function App() {
 
   return (
     <div className='App'>
+      {showMessage && <Message /> }
       <Header />
       {/* conditionally render the Loader component if the loading 
       state is set to true – otherwise, log out the quotes 

@@ -17,7 +17,7 @@ function QuoteCard( {quote, addToFavorites, favoriteQuotes} ) {
             </div>
             <footer>
                 <p className="author">{quote.author}</p>
-                <p className="add-favorite" onClick={() => addToFavorites(quote.id)}><Heart/></p>
+                <p className="add-favorite" onClick={() => addToFavorites(quote.id)}><Heart style={{ fill, faveStyle }} /></p>
             </footer>
         </article>
     )

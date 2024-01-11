@@ -11,4 +11,4 @@ const Message = () => {
     )
 };
 
-export Message default;
+export default Message;

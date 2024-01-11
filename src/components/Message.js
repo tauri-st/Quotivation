@@ -4,10 +4,8 @@ const Message = ( {messageText, removeMessage} ) => {
 
     return (
         <div className="message">
-            <p>
-                {messageText}
-                <span className="close-message" onClick={removeMessage}>X</span>
-            </p>
+            <p>{messageText}</p>
+            <span className="close-message" onClick={removeMessage}>X</span>
         </div>
     )
 };

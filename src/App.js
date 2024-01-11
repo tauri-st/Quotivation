@@ -81,7 +81,9 @@ function App() {
 
   return (
     <div className='App'>
-      {showMessage && <Message /> }
+      {/*Pass the props needed in order to display the message
+      text and allow user to dismiss the message */}
+      {showMessage && <Message messageText={messageText} removeMessage={removeMessage}/> }
       <Header />
       {/* conditionally render the Loader component if the loading 
       state is set to true – otherwise, log out the quotes 

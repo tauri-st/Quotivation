@@ -90,7 +90,8 @@ function App() {
             categories={categories} 
             category={category} 
             handleCategoryChange={handleCategoryChange}
-            addToFavorites={addToFavorites}/>}
+            addToFavorites={addToFavorites}
+            favoriteQuotes={favoriteQuotes}/>}
       </main>
       <Footer />
     </div>

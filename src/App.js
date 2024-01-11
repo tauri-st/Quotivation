@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Quotes from "./components/quotes/Quotes";
 import FavoriteQuotes from "./components/quotes/FavoriteQuotes";
+import Message from "./components/Message";
 import { Loader } from "react-feather";
 import "./App.css";
 
@@ -53,14 +54,14 @@ function App() {
     console.log(alreadyFavorite);
 
     if (alreadyFavorite === selectedQuote) {
-      console.log("This quote is already in your favorites! Choose another!")
+      setMessageText("This quote is already in your favorites! Choose another!")
     } else if (favoriteQuotes.length < maxFaves) {
       //Include all quotes already in array and add new quote
       setFavoriteQuotes([...favoriteQuotes, selectedQuote]);
       console.log("New quote added to array")
       console.log(favoriteQuotes.length);
     } else {
-      console.log("Max number of Favorite Quotes reached. Please delete one to add another!")
+      setMessageText("Max number of Favorite Quotes reached. Please delete one to add another!")
     }
   };
 

@@ -21,6 +21,7 @@ function App() {
     "Motivation", "Learning", "Success", "Empowerment"];
   const filteredQuotes = category !== "All" ? quotes.filter(quote =>
     quote.categories.includes(category)) : quotes;
+  const showMessage = false;
   
   const fetchQuotes = async () => {
     try {

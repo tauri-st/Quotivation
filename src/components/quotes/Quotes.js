@@ -4,7 +4,7 @@ import CategoryForm from "./CategoryForm";
 
 // Destructure the category and categories prop that we 
 // receive from App.js
-function Quotes( {filteredQuotes, category, categories, handleCategoryChange, addToFavorites} ) {
+function Quotes( {filteredQuotes, category, categories, handleCategoryChange, addToFavorites, favoriteQuotes} ) {
 
     return (
         <section className="all-quotes">
@@ -16,7 +16,7 @@ function Quotes( {filteredQuotes, category, categories, handleCategoryChange, ad
                     <CategoryForm category={category} categories={categories} handleCategoryChange={handleCategoryChange}/>
                 </div>
                 {filteredQuotes.map((quote) => (
-                    < QuoteCard key={quote.id} quote={quote} addToFavorites={addToFavorites}/>
+                    < QuoteCard key={quote.id} quote={quote} addToFavorites={addToFavorites} favoriteQuotes={favoriteQuotes}/>
                 ))}
             </div>
         </section>

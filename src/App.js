@@ -60,6 +60,7 @@ function App() {
       //Include all quotes already in array and add new quote
       setFavoriteQuotes([...favoriteQuotes, selectedQuote]);
       setMessageText("Added to Favorites!")
+      setShowMessage(true);
       console.log(favoriteQuotes.length);
     } else {
       setMessageText("Max number of Favorite Quotes reached. Please delete one to add another!")

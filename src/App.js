@@ -59,7 +59,7 @@ function App() {
     } else if (favoriteQuotes.length < maxFaves) {
       //Include all quotes already in array and add new quote
       setFavoriteQuotes([...favoriteQuotes, selectedQuote]);
-      console.log("New quote added to array")
+      setMessageText("Added to Favorites!")
       console.log(favoriteQuotes.length);
     } else {
       setMessageText("Max number of Favorite Quotes reached. Please delete one to add another!")

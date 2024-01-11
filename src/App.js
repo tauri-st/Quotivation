@@ -75,6 +75,10 @@ function App() {
     setFavoriteQuotes(updatedFavorites);
   };
 
+  const removeMessage = () => {
+    showMessage = false;
+  };
+
   return (
     <div className='App'>
       <Header />

@@ -66,8 +66,8 @@ function App() {
   // quote whose id was passed to the removeFromFavorites 
   // function.
   const removeFromFavorites = (quoteId) => {
-    setFavoriteQuotes(favoriteQuotes.filter(quote =>
-      !quotes.includes(quoteId)))
+    const updatedFavorites = favoriteQuotes.filter((quote) => quote.id !== quoteId);
+    setFavoriteQuotes(updatedFavorites);
   };
 
   return (

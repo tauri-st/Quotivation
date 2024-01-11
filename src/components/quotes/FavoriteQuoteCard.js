@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//Can also be written as const Component = () => {}
 function FavoriteQuoteCard ( {quote, removeFromFavorites} ) {
 
     return (

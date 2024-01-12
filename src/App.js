@@ -40,6 +40,25 @@ function App() {
     fetchQuotes();
   }, []);
 
+  // update the initial value of your favoriteQuotes state 
+  // – it neanother useEffect.
+  componentDidMount() {
+    const savedQuotes = localStorage.getItem("savedQuotes");
+    if (savedQuotes) {
+      const parsedQuotes = JSON.parse(savedQuotes);
+      this.setState(parsedQuotes);
+    }
+  }
+  
+  componentDidUpdate() {
+    const savedQuotes = JSON.stringify(this.state);
+    localStorage.setItem("savedQuotes", savedQuotes);
+  }
+
+  useEffect(() => {
+    componentDidMount();
+  }, [componentDidUpdate]);
+
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
   };
@@ -76,25 +95,6 @@ function App() {
   const removeMessage = () => {
     setShowMessage(false);
   };
-
-  // update the initial value of your favoriteQuotes state 
-  // – it need to create another useEffect.
-  componentDidUpdate() {
-    const stateString = JSON.stringify(this.state);
-    localStorage.setItem("stateString", stateString);
-  }
-
-  componentDidMount() {
-    const stateString = localStorage.getItem("stateString");
-    if (stateString) {
-      const savedState = JSON.parse(stateString);
-      this.setState(savedState);
-    }
-  }
-
-  useEffect(() => {
-    componentDidMount();
-  }, [componentDidUpdate]);
 
   return (
     <div className='App'>

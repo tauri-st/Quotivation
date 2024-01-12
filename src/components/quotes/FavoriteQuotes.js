@@ -9,7 +9,7 @@ function FavoriteQuotes ( {favoriteQuotes, maxFaves, removeFromFavorites} ) {
             <h3>Top 3 favorite quotes</h3>
               {favoriteQuotes.length > 0 
                 && <ul>
-                    {favoriteQuotes.map((quote) => (
+                    {favoriteQuotes.map((index, quote) => (
                         <FavoriteQuoteCard key={quote.id} quote={quote} removeFromFavorites={removeFromFavorites}/>
                     ))}
                     </ul>}

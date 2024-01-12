@@ -14,7 +14,9 @@ function FavoriteQuotes ( {favoriteQuotes, maxFaves, removeFromFavorites} ) {
                     ))}
                     </ul>}
               <div className="favorite-quotes-description">
-                <p>You can add up to three favorites by selecting from the options below <br /> Once you choose, they will appear here.</p>
+                {favoriteQuotes.length === 0 && (<p>You can add 3 more quotes to your top three favorites by selecting from the options below.</p>)}
+                {favoriteQuotes.length === 1 && (<p>You can add 2 more quotes to your top three favorites by selecting from the options below.</p>)}
+                <p>Once you choose, they will appear here.</p>
               </div>
           </div>
         </section>

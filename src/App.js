@@ -84,6 +84,9 @@ function App() {
     localStorage.setItem("stateString", stateString);
   }
 
+  componentDidMount() {
+    const stateString = localStorage.getItem("stateString");
+
   return (
     <div className='App'>
       {/*Pass the props needed in order to display the message

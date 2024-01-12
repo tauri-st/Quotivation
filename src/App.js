@@ -86,6 +86,11 @@ function App() {
 
   componentDidMount() {
     const stateString = localStorage.getItem("stateString");
+    if (stateString) {
+      const savedState = JSON.parse(stateString);
+      this.setState(savedState);
+    }
+  }
 
   return (
     <div className='App'>

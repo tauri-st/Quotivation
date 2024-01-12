@@ -10,7 +10,7 @@ function FavoriteQuotes ( {favoriteQuotes, maxFaves, removeFromFavorites} ) {
               {favoriteQuotes.length > 0 
                 && <ul>
                     {favoriteQuotes.map((index, quote) => (
-                        <FavoriteQuoteCard key={quote.id} quote={quote} removeFromFavorites={removeFromFavorites}/>
+                        <FavoriteQuoteCard key={quote.id} quote={quote} removeFromFavorites={removeFromFavorites} listPosition={index+1}/>
                     ))}
                     </ul>}
               <div className="favorite-quotes-description">

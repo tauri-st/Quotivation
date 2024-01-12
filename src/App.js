@@ -77,6 +77,13 @@ function App() {
     setShowMessage(false);
   };
 
+  // update the initial value of your favoriteQuotes state 
+  // – it need to create another useEffect.
+  componentDidUpdate() {
+    const stateString = JSON.stringify(this.state);
+    localStorage.setItem("stateString", stateString);
+  }
+
   return (
     <div className='App'>
       {/*Pass the props needed in order to display the message

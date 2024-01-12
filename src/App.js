@@ -11,7 +11,7 @@ function App() {
   const [quotes, setQuotes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [category, setCategory] = useState("All");
-  const [favoriteQuotes, setFavoriteQuotes] = useState([]);
+  const [favoriteQuotes, setFavoriteQuotes] = useState(JSON.parse(window.localStorage.getItem("favoriteQuotes")) || []);
   const [messageText, setMessageText] = useState("");
   const [showMessage, setShowMessage] = useState(false);
   
@@ -40,24 +40,9 @@ function App() {
     fetchQuotes();
   }, []);
 
-  // update the initial value of your favoriteQuotes state 
-  // – it neanother useEffect.
-  componentDidMount() {
-    const savedQuotes = localStorage.getItem("savedQuotes");
-    if (savedQuotes) {
-      const parsedQuotes = JSON.parse(savedQuotes);
-      this.setState(parsedQuotes);
-    }
-  }
-  
-  componentDidUpdate() {
-    const savedQuotes = JSON.stringify(this.state);
-    localStorage.setItem("savedQuotes", savedQuotes);
-  }
-
   useEffect(() => {
-    componentDidMount();
-  }, [componentDidUpdate]);
+    window.localStorage.setItem("favoriteQuotes", JSON.stringify(favoriteQuotes));
+  }, [favoriteQuotes]);
 
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);

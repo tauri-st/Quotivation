@@ -92,6 +92,10 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    componentDidMount();
+  }, [componentDidUpdate]);
+
   return (
     <div className='App'>
       {/*Pass the props needed in order to display the message

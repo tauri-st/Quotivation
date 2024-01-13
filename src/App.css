@@ -152,6 +152,7 @@ footer {
   color: #ad7000;
 }
 
+/*::before pseudo attribute is not available to assistive technologies so should only be aesthetic */
 .favorite-quotes .quote-card::before {
   content: "#" attr(data-list-position);
   padding: 0 1rem;

@@ -9,15 +9,13 @@ function FavoriteQuotes ( {favoriteQuotes, maxFaves, removeFromFavorites} ) {
             <h3>Top 3 favorite quotes</h3>
               {favoriteQuotes.length > 0 
                 && <ul>
-                    {favoriteQuotes.map((index, quote) => (
+                    {favoriteQuotes.map((quote, index) => (
                         <FavoriteQuoteCard key={quote.id} quote={quote} removeFromFavorites={removeFromFavorites} listPosition={index+1}/>
                     ))}
                     </ul>}
               <div className="favorite-quotes-description">
-                {favoriteQuotes.length === 0 && (<p>You can add 3 more quotes to your top three favorites by selecting from the options below. Once you choose, they will appear here.</p>)}
-                {favoriteQuotes.length === 1 && (<p>You can add 2 more quotes to your top three favorites by selecting from the options below.</p>)}
-                {favoriteQuotes.length === 2 && (<p>You can add 1 more quote to your top three favorites by selecting from the options below.</p>)}
-                {favoriteQuotes.length === 3 && (<p></p>)}
+                <p>You can add X more quotes to your top three favorites by selecting from the options below.</p>
+                <p>Once you choose, they will appear here.</p>
               </div>
           </div>
         </section>

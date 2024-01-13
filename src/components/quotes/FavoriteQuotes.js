@@ -3,6 +3,8 @@ import FavoriteQuoteCard from "./FavoriteQuoteCard";
 
 function FavoriteQuotes ( {favoriteQuotes, maxFaves, removeFromFavorites} ) {
 
+    const remainingQuotes = maxFaves - favoriteQuotes.length;
+
     return (
         <section className="favorite-quotes">
           <div className="wrapper quotes">
@@ -15,7 +17,7 @@ function FavoriteQuotes ( {favoriteQuotes, maxFaves, removeFromFavorites} ) {
                     </ul>}
               { favoriteQuotes.length < maxFaves && (
                 <div className="favorite-quotes-description">
-                  <p>You can add { maxFaves - favoriteQuotes.length } more {maxFaves-favoriteQuotes.length === 1 ? "quote" : "quotes"} to your top three favorites by selecting from the options below.</p>
+                  <p>You can add {remainingQuotes} more {remainingQuotes === 1 ? "quote" : "quotes"} to your top three favorites by selecting from the options below.</p>
                   <p>Once you choose, they will appear here.</p>
                 </div>
               )}
